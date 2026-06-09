@@ -1,0 +1,2 @@
+# Requisitos do projeto (nenhuma dependência externa necessária)
+python>=3.8
