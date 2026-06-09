@@ -1,88 +1,94 @@
-# Conversor de Bases Numéricas
+# A3 – Matemática Computacional Aplicada
 
-Este repositório contém uma versão principal em Python e uma versão visual opcional.
-Não há bibliotecas de terceiros; os algoritmos foram implementados manualmente.
+## Conversão de Sistemas Numéricos
 
-As duas formas de uso são:
+### Integrantes
+- Gabriel Corrêa Lopes
+- Eloisa Lohn da Silva
 
-- `py/main.py` — menu interativo em console.
-- `web/index.html` — interface visual com CSS separado para edição fácil.
+### Professores
+- Claudio Coelho
+- Tamires Louzada
 
-## Alinhamento com o enunciado
+### Instituição
+Universidade do Sul de Santa Catarina – UNISUL
 
-O trabalho atende ao tema de **conversão de sistemas numéricos / mudança de base**.
+---
 
-- A lógica de conversão foi feita manualmente, sem funções prontas de conversão.
-- A versão em `py/main.py` é a mais segura para a entrega, porque está em **Python** e usa apenas recursos nativos.
-- A versão visual em `web/` é um bônus de apresentação. Se o professor exigir que tudo fique só em Python ou Java, apresente a versão de console como principal.
+# Descrição do Projeto
 
-## O que precisa ter instalado
+Este projeto foi desenvolvido para a disciplina de Matemática Computacional Aplicada com o objetivo de implementar algoritmos de conversão entre sistemas numéricos, aplicando conceitos matemáticos e computacionais estudados durante a unidade curricular.
 
-- **Python 3** para rodar a versão de console e os testes.
-- **Um navegador** para abrir a versão visual.
+O software permite realizar conversões entre os sistemas decimal, binário, octal e hexadecimal de forma rápida, precisa e amigável.
 
-Não é necessário instalar pacotes com `pip`.
+Todas as conversões foram implementadas manualmente, sem o uso de bibliotecas prontas para mudança de base, atendendo aos requisitos propostos no trabalho.
 
-Estrutura principal:
+---
+
+# Funcionalidades
+
+O sistema realiza as seguintes conversões:
+
+- Decimal → Binário
+- Decimal → Octal
+- Decimal → Hexadecimal
+- Binário → Decimal
+- Octal → Decimal
+- Hexadecimal → Decimal
+
+Além das conversões, o software oferece:
+
+- Validação de entradas
+- Tratamento de erros
+- Suporte a números inteiros positivos e negativos
+- Testes básicos de funcionamento
+- Interface visual para demonstração
+
+---
+
+# Estrutura do Projeto
 
 - `py/conversor.py` — funções de conversão e validação.
-- `py/main.py` — menu interativo no console.
+- `py/main.py` — menu interativo em console.
 - `py/tests/test_conversor.py` — testes simples executáveis.
-- `web/index.html` — interface visual em HTML.
-- `web/style.css` — aparência da interface, fácil de alterar.
-- `web/script.js` — lógica da versão visual.
-- `run_python.bat` — script para executar a versão console em nova janela.
-- `run_app.bat` — script para abrir a versão visual no navegador.
-- `entrega/listagem_programa.md` — documento de entrega com a listagem e explicação do programa.
-- `entrega/roteiro_apresentacao.md` — roteiro curto para a apresentação.
+- `web/index.html` — interface visual.
+- `web/style.css` — aparência da interface.
+- `web/script.js` — lógica da interface visual.
+- `run_python.bat` — execução da versão Python.
+- `run_app.bat` — execução da interface visual.
+- `entrega/listagem_programa.md` — documento contendo a listagem do programa.
+- `entrega/roteiro_apresentacao.md` — roteiro utilizado na apresentação.
 
-## Como executar
+---
 
-1. Abrir terminal na pasta do projeto:
+# Tecnologias Utilizadas
 
-```powershell
-cd "C:\Users\Gabriel.lopes\Desktop\Calculadora java"
-```
+## Linguagem Principal
 
-2. Abrir a interface visual no navegador:
+- Python 3
 
-```powershell
-.\run_app.bat
-```
+## Interface Visual
 
-Se preferir, também dá para abrir direto no navegador com um duplo clique em `web/index.html`.
+- HTML5
+- CSS3
+- JavaScript
 
-3. Se quiser a versão console ou os testes, use o launcher de texto:
+## Requisitos
 
-```powershell
-.\run_python.bat
-```
+Não é necessário instalar bibliotecas externas ou pacotes adicionais.
 
-4. No menu escolha `1` para rodar o menu interativo ou `2` para rodar os testes.
+É necessário apenas:
 
-Se o Windows não reconhecer o comando `python`, troque por `py -3` dentro do arquivo `run_python.bat`.
+- Python 3 instalado para executar a versão em console.
+- Navegador de internet para utilizar a interface visual.
 
-## Rodar direto sem os arquivos `.bat`
+---
 
-Na pasta `py`, rode o menu principal com:
+# Como Executar
 
-```powershell
-python main.py
-```
+## Interface Visual
 
-Ou rode os testes com:
+Execute o arquivo:
 
 ```powershell
-python -m tests.test_conversor
-```
-
-## Observações importantes
-
-- Suporta números inteiros, inclusive negativos. A parte fracionária não está implementada.
-- A interface visual usa apenas HTML, CSS e JavaScript puro.
-- Sua colega pode mexer no visual alterando principalmente `web/style.css`.
-- Mensagens de erro são exibidas para entradas inválidas; você pode tentar novamente no menu.
-
-## Arquivos de entrega
-
-Se o professor pedir o material para enviar, os arquivos principais já estão separados na pasta `entrega/`.
+run_app.bat
