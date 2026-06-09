@@ -1,81 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversor de Bases</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="page-shell">
-    <header class="hero">
-      <div>
-        <p class="eyebrow">Versão visual</p>
-        <h1>Conversor de Bases Numéricas</h1>
-        <p class="subtitle">HTML, CSS e JavaScript puro. O visual fica todo em <strong>style.css</strong>.</p>
-      </div>
-      <div class="hero-note">
-        <span>Sem bibliotecas externas</span>
-        <span>Pronto para editar no CSS</span>
-      </div>
-    </header>
-
-    <main class="layout">
-      <aside class="sidebar card">
-        <h2>Modos</h2>
-        <div class="mode-list" id="modeList">
-          <button class="mode-button is-active" data-mode="dec_bin">Decimal → Binário</button>
-          <button class="mode-button" data-mode="dec_oct">Decimal → Octal</button>
-          <button class="mode-button" data-mode="dec_hex">Decimal → Hexadecimal</button>
-          <button class="mode-button" data-mode="bin_dec">Binário → Decimal</button>
-          <button class="mode-button" data-mode="oct_dec">Octal → Decimal</button>
-          <button class="mode-button" data-mode="hex_dec">Hexadecimal → Decimal</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Bases</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Versão visual</p>
+          <h1>Conversor de Bases Numéricas</h1>
+          <p class="subtitle">
+            HTML, CSS e JavaScript puro. O visual fica todo em
+            <strong>style.css</strong>.
+          </p>
         </div>
-        <div class="tip-box">
-          <strong>Dica</strong>
-          <p>Para mudar as cores e o estilo, edite as variáveis no topo do arquivo <code>style.css</code>.</p>
+        <div class="hero-note">
+          <span>Sem bibliotecas externas</span>
         </div>
-      </aside>
+      </header>
 
-      <section class="content card">
-        <div class="card-header">
-          <div>
-            <p class="section-label">Conversão atual</p>
-            <h2 id="modeTitle">Decimal → Binário</h2>
-            <p id="modeDescription">Digite um número decimal inteiro e converta para binário.</p>
+      <main class="layout">
+        <aside class="sidebar card">
+          <h2>Modos</h2>
+          <div class="mode-list" id="modeList">
+            <button class="mode-button is-active" data-mode="dec_bin">
+              Decimal → Binário
+            </button>
+            <button class="mode-button" data-mode="dec_oct">
+              Decimal → Octal
+            </button>
+            <button class="mode-button" data-mode="dec_hex">
+              Decimal → Hexadecimal
+            </button>
+            <button class="mode-button" data-mode="bin_dec">
+              Binário → Decimal
+            </button>
+            <button class="mode-button" data-mode="oct_dec">
+              Octal → Decimal
+            </button>
+            <button class="mode-button" data-mode="hex_dec">
+              Hexadecimal → Decimal
+            </button>
           </div>
-          <p class="example" id="modeExample">Exemplo: 45 → 101101</p>
-        </div>
+        </aside>
 
-        <label class="field">
-          <span id="inputLabel">Número decimal</span>
-          <input id="valueInput" type="text" placeholder="Ex.: 45" autocomplete="off">
-        </label>
-
-        <div class="actions">
-          <button class="primary-button" id="convertButton">Converter</button>
-          <button class="secondary-button" id="clearButton">Limpar</button>
-        </div>
-
-        <div class="result-panel">
-          <p class="section-label">Resultado</p>
-          <div id="resultValue" class="result-value">A conversão aparecerá aqui.</div>
-          <p id="statusText" class="status-text">Selecione um modo e digite um valor.</p>
-        </div>
-
-        <div class="history-panel">
-          <div class="card-header compact">
+        <section class="content card">
+          <div class="card-header">
             <div>
-              <p class="section-label">Histórico</p>
-              <h3>Últimas conversões</h3>
+              <p class="section-label">Conversão atual</p>
+              <h2 id="modeTitle">Decimal → Binário</h2>
+              <p id="modeDescription">
+                Digite um número decimal inteiro e converta para binário.
+              </p>
             </div>
+            <p class="example" id="modeExample">Exemplo: 45 → 101101</p>
           </div>
-          <div class="history-list" id="historyList"></div>
-        </div>
-      </section>
-    </main>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+          <label class="field">
+            <span id="inputLabel">Número decimal</span>
+            <input
+              id="valueInput"
+              type="text"
+              placeholder="Ex.: 45"
+              autocomplete="off"
+            />
+          </label>
+
+          <div class="actions">
+            <button class="primary-button" id="convertButton">Converter</button>
+            <button class="secondary-button" id="clearButton">Limpar</button>
+          </div>
+
+          <div class="result-panel">
+            <p class="section-label">Resultado</p>
+            <div id="resultValue" class="result-value">
+              A conversão aparecerá aqui.
+            </div>
+            <p id="statusText" class="status-text">
+              Selecione um modo e digite um valor.
+            </p>
+          </div>
+
+          <div class="history-panel">
+            <div class="card-header compact">
+              <div>
+                <p class="section-label">Histórico</p>
+                <h3>Últimas conversões</h3>
+              </div>
+            </div>
+            <div class="history-list" id="historyList"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
